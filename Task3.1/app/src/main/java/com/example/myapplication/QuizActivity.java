@@ -45,7 +45,7 @@ public class QuizActivity extends AppCompatActivity {
     TextView answer3;
     ProgressBar progressBar;
     int score=0;
-    TextView textView;
+
 
     public void checkAnswer(int current){
         if(answer1.isSelected()) {
@@ -93,8 +93,9 @@ public class QuizActivity extends AppCompatActivity {
         answer3=findViewById(R.id.textViewf);
         progressBar=findViewById(R.id.progressBar2);
         progressBar.setProgress(progressNumber);
-        textView=findViewById(R.id.abc);
-        textView.setText(String.valueOf(score));
+        answer1.setBackgroundResource(R.drawable.border);
+        answer2.setBackgroundResource(R.drawable.border);
+        answer3.setBackgroundResource(R.drawable.border);
 
         answer1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -151,7 +152,7 @@ public class QuizActivity extends AppCompatActivity {
                         checkAnswer(progressNumber);
                         submitBtn.setText("Next");
                         isClickedButton=1;
-                        textView.setText(String.valueOf(score));
+
                         if(answer1.getText().toString().equals(answers[progressNumber-1])){
                             answer1.setBackgroundColor(Color.GREEN);
                         }
