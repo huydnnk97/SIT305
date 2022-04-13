@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"></FrameLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/abc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TOP STORIES"
+            android:textSize="30dp"
+            android:layout_gravity="center"></TextView>
+        <RelativeLayout
+            android:id="@+id/mainLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnLeft"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="45dp"
+                android:background="@drawable/circle_btn"
+
+                android:gravity="center"
+                android:text="&lt;"
+                ></Button>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_top_stories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scrollbars="horizontal"
+                android:scrollbarSize="0dp"
+                android:layout_marginTop="10dp"/>
+<!--                -->
+<!--                android:scrollbarSize="0dp"-->
+
+            <Button
+                android:id="@+id/btnRight"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="45dp"
+                android:background="@drawable/circle_btn"
+
+                android:gravity="center"
+                android:text="&gt;"
+                ></Button>
+
+
+
+        </RelativeLayout>
+
+        <TextView
+
+            android:id="@+id/newTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="NEWS"
+            android:textSize="25dp"></TextView>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="25dp"
+            android:id="@+id/rv_new"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"
+            />
+    </LinearLayout>
+
+</LinearLayout>
